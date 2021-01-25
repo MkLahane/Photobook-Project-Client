@@ -6,7 +6,6 @@ import SingleFileUpload from './SingleFileUpload';
 import Notification from './Notification';
 import editTextSrc from '../icons/editIcon.png';
 import noImageSrc from '../icons/noImage.png';
-import { REACT_APP_API_KEY } from '../config';
 import Loading from '../components/Loading';
 import './coverpage.css';
 
