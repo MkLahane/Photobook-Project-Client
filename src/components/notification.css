@@ -14,7 +14,7 @@
     letter-spacing: 5px;
     color: black;
     border: 3px dashed white;
-    background: var(--divColor);
+    background: calc(var(--divColor) * 1.0);
 }
 
 .notify-overlay {
@@ -44,7 +44,7 @@
 .close-button span {
     display: block;
     height: 95%;
-    background: var(--normalColor);
+    background: calc(var(--normalColor) * 1.0);
     padding: 5px 10px;
 }
 
@@ -54,5 +54,5 @@
 
 .close-button:hover > span {
     /* background: #2BFF7B; */
-    background: var(--hoverColor);
+    background: calc(var(--hoverColor) * 1);
 }

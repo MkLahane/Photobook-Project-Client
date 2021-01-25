@@ -28,7 +28,7 @@
   height: calc(var(--slide-h) * 1.0); 
   transform: translateX(calc(100% * var(--offset))) scale(0.8);
   transition: all 0.3s ease; 
-  opacity: var(--slideOpacity);
+  opacity: calc(var(--slideOpacity) * 1.0);
 }
 
 .active-slide-div {

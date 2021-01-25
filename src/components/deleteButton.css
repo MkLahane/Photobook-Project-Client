@@ -16,7 +16,7 @@
 .delete-button span {
     display: block;
     height: 100%;
-    background: var(--normalColor);
+    background: calc(var(--normalColor) * 1.0);
 }
 
 .delete-button:hover {
