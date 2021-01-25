@@ -1,0 +1,100 @@
+.loading-div {
+    position: fixed;
+    width: 100vw;
+    height: 120vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.3);
+    font-family: 'custom_font';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15rem;
+    animation: loading-color-anim 2s ease-in-out infinite;
+}
+
+@keyframes loading-color-anim {
+    0% {
+        color: white;
+    }
+    25% {
+       color: white;
+    }
+    25.0001% {
+        color: black;
+    }
+    100% {
+        color: black;
+    }
+}
+
+.loading-background {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0F0F0E;
+    width: 20%;
+    height: 20%;
+    animation: background-anim 2s ease-in-out infinite;
+    transform-origin: right;
+}
+
+.loading-background-temp {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 20%;
+    height: 20%;
+    
+}
+
+@keyframes background-anim {
+    0% {
+        transform: scaleX(0);
+        transform-origin: right;
+        background: #0F0F0E;
+        
+    }
+    25% {
+        transform: scaleX(1);
+        transform-origin: right;
+        background: #0F0F0E;
+        
+    }
+    25.0001% {
+        transform-origin: left;
+        transform: scaleX(1);
+        background: #2BFF7B;
+        
+    }
+    100% {
+        transform: scaleX(0);
+        transform-origin: left;
+        background: #2BFF7B;
+        
+    }
+}
+
+
+.loading-div span {
+    text-shadow: 10px 10px 50px white;
+    animation: loading-span-anim 2s ease-in-out infinite;
+    animation-delay: calc(var(--l_offset) * 0.1s);
+}
+
+@keyframes loading-span-anim {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+

@@ -1,0 +1,143 @@
+
+
+.feed {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: none;
+    width: 70%;
+    margin: auto;
+    flex-direction: column;
+    padding-top: 50px;
+    background: repeating-linear-gradient(to top left, #0F0F0E, #191A19 180%);
+    background: #191A19;
+    background: none;
+}
+
+.photobook-in-feed {
+    background: none;
+    width: 700px;
+    max-height: 600px; 
+    min-height: 600px;
+    margin-bottom: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    align-content: stretch;
+    flex-direction: column;
+    border: 6px dashed black;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 300px rgba(0, 0, 0, 1);
+}
+
+.user-data {
+    color: white;
+    font-size: 3rem;
+    line-height: 0px;
+    letter-spacing: 5px;
+    font-family: 'custom_font';
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 0px #2BFF7B;
+}
+
+/* .user-data span {
+    display: block;
+    position: relative;
+    top: -20px;
+    width: 100%;
+    height: 5px;
+    border-top: 3px dashed black;
+} */
+
+.user-data span {
+  position: relative;
+  top: -20px;
+  display: block;
+  background: #2BFF7B;
+  width: 100%;
+  height: 5px;
+  transition: all 0.3s ease; 
+}
+
+.cover-image-in-feed {
+    width: 100%;
+    max-height: 500px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-image-in-feed img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    box-shadow: 10px 10px 0px white;
+    border: none;
+    outline: none;
+}
+
+
+.overlay-for-data {
+    position: absolute;
+    width: 700px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0.0;
+    transition: all 0.3s ease-out; 
+    cursor: pointer;
+}
+
+.overlay-for-data:hover {
+    opacity: 1.0;
+}
+.overlay-for-data:hover > .cover-text {
+    transform: translateY(0px);
+}
+
+
+
+.overlay-for-data .cover-text {
+    font-size: 3rem;
+    font-family: 'custom_font';
+    color: black;
+    padding: 30px;
+    background: white;
+    transform: translateY(-100px);
+    transition: all 0.3s ease-out;
+    text-shadow: 2px 2px 0px #0F0F0E;
+    /* clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 92% 7%, 100% 15%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%); */
+    box-shadow: 0px 0px 100px white;
+}
+
+
+.photobook-info-feed {
+    min-height: 10px;
+    position: relative;
+    top: -100px;
+    display: flex;
+    justify-content: space-around; 
+    
+}
+
+.photobook-info-feed div {
+    display: flex;
+    font-size: 2rem;
+    font-family: 'custom_font';
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.photobook-info-feed div svg {
+    width: 40px;
+    height: 40px;
+    fill: #2BFF7B;
+    margin: 10px;
+}

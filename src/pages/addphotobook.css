@@ -1,0 +1,235 @@
+.add-photobook-container {
+    margin-top: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px; 
+    min-height: 70vh;
+    background: rgba(19, 23, 19, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slides-container {
+  display: grid; 
+  width: 80%;
+  padding: 20px 0px;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  justify-content: center;
+}
+
+.slide-div {
+  grid-area: 1 / -1;
+  width: var(--slide-w);
+  height: var(--slide-h); 
+  transform: translateX(calc(100% * var(--offset))) scale(0.8);
+  transition: all 0.3s ease; 
+  opacity: var(--slideOpacity);
+}
+
+.active-slide-div {
+  grid-area: 1 / -1;
+  width: var(--active-slide-w);
+  height: var(--active-slide-h); 
+  transform: translateX(calc(100% * var(--offset))); 
+  transition: all 0.3s ease; 
+  box-shadow: 0px 5px 200px rgba(0, 0, 0, 1);
+  opacity: 1.0;
+}
+
+.active-slide-div img {
+  width: var(--active-slide-w);
+  height: var(--active-slide-h);
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.slide-div img {
+  width: var(--slide-w);
+  height: var(--slide-h);
+  object-fit: contain;
+}
+
+.debug {
+  position: fixed;
+  bottom: -20px; 
+  left: 100px;
+  color: white;
+}
+
+.mutation-buttons {
+  margin-left: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.mutation-buttons button {
+  width: 75px;
+  height: 75px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+
+.mutation-buttons button span {
+  border-radius: 50%;
+  font-size: 3rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  width: var(--slide-w);
+  height: var(--slide-h); 
+  grid-area: 1 / -1;
+  background-size: cover; 
+  background-position: center center;
+  transform: translateX(calc(100% * var(--offset))) scale(0.8) rotateY(calc(-25deg * var(--rotDir)));
+  transition: all 0.3s ease; 
+  opacity: 0.7;
+}
+
+.active-slide {
+  width: calc(var(--slide-w) 1.2);
+  height: calc(var(--slide-h) * 1.2); 
+  grid-area: 1 / -1;
+  background-size: cover; 
+  background-position: center center;
+  transform: translateX(calc(100% * var(--offset)));
+  border: 2px dashed white; 
+  transition: all 0.3s ease; 
+  box-shadow: 0px 5px 200px rgba(0, 0, 0, 1);
+  --x: calc(var(--px) - 0.5);
+  --y: calc(var(--py) - 0.5);
+}
+
+
+
+
+.active-slide:hover {
+  transition: none;
+  transform: rotateY(calc(var(--x) * 45deg)) rotateX(calc(var(--y) * 45deg));
+}
+
+
+
+
+
+
+.buttons-container {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 130%;
+    height: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+
+.fixed-slide {
+  position: absolute;
+  width: var(--slide-w);
+  min-height: var(--slide-h);  
+  background: none;
+  pointer-events: none; 
+}
+
+
+.add-photobook-button {
+    text-align: center;
+    padding: 5px;
+    background: none;
+    color: white;
+    font-family: 'custom_font';
+    font-size: 5rem;
+    width: 100px;
+    outline: none;
+    border: 4px dashed black;
+    /* box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.8); */
+}
+
+
+
+.add-photobook-button span {
+    display: block;
+    height: 100%;
+    background: var(--normalColor);
+}
+
+.add-photobook-button:hover {
+    color: black;
+    border: 4px dashed white;
+}
+
+.add-photobook-button:hover > span {
+    background: #2BFF7B;
+}
+
+
+
+
+
+.no-image {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  background: #2BFF7B;    
+  border: 3px dashed white;           
+}
+
+.image-text-div {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  height: 70px; 
+  border-radius: 0px;
+  padding: 10px; 
+  transition: all 0.3s ease; 
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.3s ease;
+}
+
+.image-text-div a {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #2BFF7B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-text-div a img {
+  filter: invert(100%);
+  width: 40px;
+  height: 40px;
+}
+.image-text-div input {
+  height: 40px;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 3px dashed white;
+  margin-right: 20px;
+  color: white;
+  font-size: 2rem;  
+  font-family: 'custom_font';
+  transition: all 0.3s ease-out;
+}
+
+

@@ -1,0 +1,304 @@
+.photobook-container {
+    width: 700px; 
+    min-height: 70vh;
+    background: rgba(19, 23, 19, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.photobook-parent-div {
+    background: rgba(19, 23, 19, 0.8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.text-data-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0.0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-data-overlay .cover-text {
+    font-size: 2.5rem;
+    font-family: 'custom_font';
+    color: black;
+    padding: 15px;
+    background: white;
+    width: 80%;
+    transform: translateY(-100px);
+    transition: all 0.3s ease-out;
+    text-align: center;
+    text-shadow: 2px 2px 0px #0F0F0E;
+    /* clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 92% 7%, 100% 15%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%); */
+    box-shadow: 0px 0px 100px white;
+}
+
+.text-data-overlay:hover {
+    opacity: 1.0;
+}
+.text-data-overlay:hover > .cover-text {
+    transform: translateY(0px);
+}
+
+.photobook-user {
+    display: inline-block;
+    padding: 0px 30px;
+    font-size: 2rem;
+    font-family: 'custom_font';
+    margin-right: auto;
+}
+
+.photobook-user span {
+    display: block; 
+    position: relative;
+    top: -50px;
+    width: 120%;
+    height: 5px;
+    border-top: 6px dashed #2BFF7B;
+}
+
+
+.photobook-status {
+    padding: 0px 20px;
+    min-width: 600px;
+    max-height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.photobook-button-status {
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.photobook-button-status button {
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    font-family: 'custom_font';
+    font-size: 2rem;
+    text-align: center;
+    
+}
+
+
+
+.photobook-button-status button label {
+    margin-right: 50px;
+    margin-left: 20px;
+}
+.photobook-button-status button svg {
+    width: 40px;
+    padding: 15px;
+    height: 40%;
+    transition: all 0.3s ease; 
+}
+
+
+.photobook-liked {
+    background: black;
+    border: 2px dashed white;
+    fill: #FF2525;
+    fill: #2BFF7B;
+}
+
+.photobook-liked:hover {
+    border: 2px dashed black;
+    background: #2BFF7B;
+    fill: black;
+    transition: all 0.1s ease; 
+}
+
+.photobook-not-liked {
+    border: 2px dashed black;
+    background: #2BFF7B;
+    transition: all 0.3s ease; 
+}
+
+.photobook-not-liked:hover {
+    background: black;
+    border: 2px dashed white;
+    fill: #2BFF7B;
+}
+
+
+
+
+.hide-comments {
+    border: 2px dashed black;
+    background: #2BFF7B;
+    transition: all 0.3s ease; 
+}
+
+.hide-comments:hover {
+    background: black;
+    border: 2px dashed white;
+    fill: #2BFF7B;
+}
+
+.show-comments {
+    background: black;
+    border: 2px dashed white;
+    fill: #2BFF7B;
+}
+
+.show-comments:hover {
+    fill: black;
+    border: 2px dashed black;
+    background: #2BFF7B;
+    transition: all 0.3s ease;
+}
+
+.photobook-comments {
+    font-family: 'custom_font';
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 500px;
+    width: 80%;
+}
+
+.photobook-comment {
+    width: 80%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    /* border: 6px dashed rgba(255, 255, 255, 0.5); */
+    border-bottom: 6px dashed rgba(255, 255, 255, 0.5);    
+    margin-top: 50px;
+    box-shadow: 5px 5px 0px white, 10px 10px 0px #2BFF7B;
+    margin-bottom: 50px;
+    line-height: 10px;
+    box-sizing: border-box;
+}
+
+.comment-body {
+    min-height: 50px;
+    display: flex;
+    margin-bottom: 5px;
+    padding: 10px;   
+}
+
+
+
+.photobook-comment .photobook-user {
+    font-size: 1rem;
+    /* width: 80%; */
+    margin: 0;
+    padding: 0;
+    
+    
+}
+.photobook-comment .photobook-user span {
+    top: -10px;
+}
+
+.add-comment {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    flex-direction: column;
+}
+
+.add-comment form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    margin-bottom: 20px;
+}
+
+.add-comment-button {
+    text-align: center;
+    padding: 5px;
+    background: none;
+    color: white;
+    font-family: 'custom_font';
+    font-size: 3rem;
+    outline: none;
+    border: 4px dashed #2BFF7B;
+    box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.8);
+    margin-left: auto;
+}
+
+.add-comment-button span {
+    display: block;
+    height: 95%;
+    background: #0F0F0E;
+    padding: 10px;
+    color: white;
+}
+
+.add-comment-button:hover {
+    color: black;
+    border: 4px dashed white;
+}
+
+.add-comment-button:hover > span {
+    background: #2BFF7B;
+    color: black;
+}
+
+
+.slide-buttons {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    background: red;
+    max-height: 0px;
+}
+
+.current-slide-background {
+  position: fixed;
+  width: 80vw;
+  height: 80vh;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+  filter: blur(0.1em);
+  pointer-events: none;
+  z-index: -2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-slide-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

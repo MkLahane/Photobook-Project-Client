@@ -1,0 +1,40 @@
+.file-normal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: transparent;
+  font-family: 'custom_font';
+  cursor: pointer;
+}
+
+
+.file-uploading {
+  width: 300px;
+  min-height: 300px;
+  border: 6px dashed black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: white;
+  font-family: 'custom_font';
+  cursor: pointer;
+  text-align: center;
+}
+
+.upload-div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+

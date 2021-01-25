@@ -1,0 +1,35 @@
+.comment-liked {
+    background: black;
+    border: 4px dashed white;
+    fill: #FF2525;
+    fill: #2BFF7B;
+}
+
+.comment-liked:hover {
+    border: 4px dashed black;
+    background: #2BFF7B;
+    fill: black;
+    transition: all 0.1s ease; 
+}
+
+.comment-not-liked {
+    border: 4px dashed black;
+    background: #2BFF7B;
+    transition: all 0.3s ease; 
+}
+
+.comment-not-liked:hover {
+    background: black;
+    border: 4px dashed white;
+    fill: #2BFF7B;
+}
+
+.comment-liked svg {
+    width: 40px;
+    height: 40px;
+}
+
+.comment-not-liked svg {
+    width: 40px;
+    height: 40px;
+}

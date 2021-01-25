@@ -1,0 +1,29 @@
+.delete-button {
+    text-align: center;
+    padding: 5px;
+    background: none;
+    color: white;
+    font-family: 'custom_font';
+    font-size: 3rem;
+    width: 100px;
+    outline: none;
+    border: 4px dashed black;
+    /* box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.8); */
+}
+
+
+
+.delete-button span {
+    display: block;
+    height: 100%;
+    background: var(--normalColor);
+}
+
+.delete-button:hover {
+    color: black;
+    border: 4px dashed white;
+}
+
+.delete-button:hover > span {
+    background: #FF2525;
+}

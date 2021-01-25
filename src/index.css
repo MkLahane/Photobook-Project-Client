@@ -1,15 +1,23 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
-  color: white;
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@font-face {
+  font-family: 'custom_font';
+  src:  url('./fonts/dpcomic.ttf') format('woff2')
+}
+:root {
+  --slide-w: 500px;
+  --slide-h: 600px;
+  --active-slide-w: 500px;
+  --active-slide-h: 600px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  min-height: 100vh;
+  background: #0F0F0E;
+  background: radial-gradient(#0F0F0E, #191A19);
+  background: repeating-linear-gradient(to top left, #0F0F0E, #191A19 20%);
+  background: #191A19;
+  color: white;
+  overflow-x: hidden;
 }
+
+

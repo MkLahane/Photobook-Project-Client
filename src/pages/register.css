@@ -1,0 +1,15 @@
+.register-div {
+    background: radial-gradient(#0F0F0E, #191A19);
+    /* background: #191A19; */
+    width: 400px;
+    min-height: 600px;
+    margin: auto;
+    font-family: 'custom_font';
+    border: 4px dashed white;
+    display: flex;
+}
+
+.register-div form {
+    position: relative;
+    top: -10px;
+}
