@@ -16,7 +16,6 @@ import RegistrationConfirmation from './pages/RegistrationConfirmation';
 import AddPhotobook from './pages/AddPhotobook';
 import { SlideIndexProvider } from './contexts/SlideContext';
 import Photobook from './pages/Photobook';
-import { REACT_APP_API_KEY } from './config';
 
 
 const httpLink = createHttpLink({
