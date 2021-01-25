@@ -96,7 +96,7 @@
 }
 
 .active-slide {
-  width: calc(var(--slide-w) 1.2);
+  width: calc(var(--slide-w) * 1.2);
   height: calc(var(--slide-h) * 1.2); 
   grid-area: 1 / -1;
   background-size: cover; 
