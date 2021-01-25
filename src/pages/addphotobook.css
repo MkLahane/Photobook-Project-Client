@@ -26,7 +26,7 @@
   grid-area: 1 / -1;
   width: calc(var(--slide-w) * 1.0);
   height: calc(var(--slide-h) * 1.0); 
-  transform: translateX(calc(100% * var(--offset))) scale(0.8);
+  transform: translateX(calc(100% * var(--offset))) scale(0.8) rotateY(calc(-25deg * var(--rotDir)));
   transition: all 0.3s ease; 
   opacity: calc(var(--slideOpacity) * 1.0);
 }

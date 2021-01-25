@@ -6,12 +6,19 @@ import noImageSrc from '../icons/noImage.png';
 
 const Slide = ({ slideIndex, img_data, offset, len, addImg, text_data, addSlideText, adding }) => {
     const slideOpacity = Math.abs(offset) == 1 ? 0.5 : 0;
+    let rotDir = 0;
+    if (offset < 0) {
+        rotDir = -1;
+    } else if (rotDir > 0) {
+        rotDir = 1;
+    }
     return (
         <div
             className={offset === 0 ? 'active-slide-div' : 'slide-div'}
             style={{
                 '--offset': offset,
-                '--slideOpacity': slideOpacity
+                '--slideOpacity': slideOpacity,
+                '--rotDir': rotDir
             }}
         >
 
