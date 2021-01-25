@@ -24,8 +24,8 @@
 
 .slide-div {
   grid-area: 1 / -1;
-  width: var(--slide-w);
-  height: var(--slide-h); 
+  width: calc(var(--slide-w) * 1.0);
+  height: calc(var(--slide-h) * 1.0); 
   transform: translateX(calc(100% * var(--offset))) scale(0.8);
   transition: all 0.3s ease; 
   opacity: var(--slideOpacity);
@@ -33,8 +33,8 @@
 
 .active-slide-div {
   grid-area: 1 / -1;
-  width: var(--active-slide-w);
-  height: var(--active-slide-h); 
+  width: calc(var(--active-slide-w) * 1.0);
+  height: calc(var(--active-slide-h) * 1.0); 
   transform: translateX(calc(100% * var(--offset))); 
   transition: all 0.3s ease; 
   box-shadow: 0px 5px 200px rgba(0, 0, 0, 1);
@@ -42,15 +42,15 @@
 }
 
 .active-slide-div img {
-  width: var(--active-slide-w);
-  height: var(--active-slide-h);
+  width: calc(var(--active-slide-w) * 1.0);
+  height: calc(var(--active-slide-h) * 1.0);
   object-fit: contain;
   pointer-events: none;
 }
 
 .slide-div img {
-  width: var(--slide-w);
-  height: var(--slide-h);
+  width: calc(var(--slide-w) * 1.0);
+  height: calc(var(--slide-h) * 1.0);
   object-fit: contain;
 }
 
@@ -85,8 +85,8 @@
 }
 
 .slide {
-  width: var(--slide-w);
-  height: var(--slide-h); 
+  width: calc(var(--slide-w) * 1.0);
+  height: calc(var(--slide-h) * 1.0); 
   grid-area: 1 / -1;
   background-size: cover; 
   background-position: center center;
@@ -138,8 +138,8 @@
 
 .fixed-slide {
   position: absolute;
-  width: var(--slide-w);
-  min-height: var(--slide-h);  
+  width: calc(var(--slide-w) * 1.0);
+  min-height: calc(var(--slide-h) * 1.0);  
   background: none;
   pointer-events: none; 
 }
@@ -163,7 +163,7 @@
 .add-photobook-button span {
     display: block;
     height: 100%;
-    background: var(--normalColor);
+    background: calc(var(--normalColor) * 1.0);
 }
 
 .add-photobook-button:hover {
