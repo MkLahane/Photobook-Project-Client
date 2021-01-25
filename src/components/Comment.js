@@ -8,6 +8,7 @@ import './comment.css';
 
 const Comment = ({ comment, photobookId }) => {
     const { user } = useContext(AuthContext);
+    console.log(comment);
     const checkIfLiked = (likes) => {
         return likes.filter(like => like.user.username === user.username).length === 1;
     }
@@ -32,6 +33,7 @@ const Comment = ({ comment, photobookId }) => {
                 <span></span>
             </div>
             <div className='comment-body'><span>{comment.body}</span></div>
+
             <DeleteButton
                 divStyle={{
                     display: 'flex',
@@ -41,6 +43,7 @@ const Comment = ({ comment, photobookId }) => {
                     alignItems: 'center'
                 }}
                 commentId={comment.id}
+                showDelete={comment.userId === user.id}
                 photobookId={photobookId}
             >
                 <button

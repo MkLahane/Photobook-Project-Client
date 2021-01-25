@@ -45,6 +45,7 @@ const PhotobookInFeed = ({ id, username, cover_image_id, cover_text, likesCount,
                     <DeleteButton
                         photobookId={id}
                         setLoading={setLoading}
+                        showDelete={true}
                         width='200px'
                     />
                 }

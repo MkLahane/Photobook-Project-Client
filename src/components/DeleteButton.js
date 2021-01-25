@@ -4,7 +4,7 @@ import { M_DELETE_PHOTOBOOK, Q_GET_PHOTOBOOKS, M_DELETE_COMMENT } from '../queri
 import './deleteButton.css';
 
 const DeleteButton = (props) => {
-    const { photobookId, setLoading, buttonStyle, divStyle, goThere, commentId } = props;
+    const { photobookId, setLoading, buttonStyle, divStyle, goThere, commentId, showDelete } = props;
     const [deletePhotobook] = useMutation(commentId ? M_DELETE_COMMENT : M_DELETE_PHOTOBOOK, {
         update(proxy, result) {
             if (commentId === undefined) {
@@ -41,13 +41,15 @@ const DeleteButton = (props) => {
     }
     return (
         <div style={divStyle}>
-            <button
-                onClick={deletePhotobookGlobal}
-                className='delete-button'
-                style={buttonStyle}
-            >
-                <span>X</span>
-            </button>
+            { showDelete &&
+                <button
+                    onClick={deletePhotobookGlobal}
+                    className='delete-button'
+                    style={buttonStyle}
+                >
+                    <span>X</span>
+                </button>
+            }
             {props.children}
         </div>
     );

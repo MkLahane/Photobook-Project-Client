@@ -41,6 +41,7 @@ const Q_GET_PHOTOBOOK = gql`
             id
             body
             likesCount
+            userId
             likes {
                 user {
                     username
