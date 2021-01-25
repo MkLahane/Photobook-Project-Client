@@ -103,23 +103,23 @@ const Photobook = (props) => {
                                 ))
                             }
                         </div>
-                        {
+                        {/* {
                             user.username === username &&
-                            <DeleteButton
-                                photobookId={id}
-                                setLoading={setLoading}
-                                goThere={goThereAfterDelete}
-                                divStyle={{
-                                    position: 'absolute',
-                                    right: '0px',
-                                    margin: '20px',
-                                    top: '210px',
-                                }}
-                                buttonStyle={{
-                                    fontSize: '5rem',
-                                    width: '150px'
-                                }} />
-                        }
+                            // <DeleteButton
+                            //     photobookId={id}
+                            //     setLoading={setLoading}
+                            //     goThere={goThereAfterDelete}
+                            //     divStyle={{
+                            //         position: 'absolute',
+                            //         right: '0px',
+                            //         margin: '20px',
+                            //         top: '210px',
+                            //     }}
+                            //     buttonStyle={{
+                            //         fontSize: '5rem',
+                            //         width: '150px'
+                            //     }} />
+                        } */}
                     </div >
                     <div className='slide-buttons'>
                         <button
