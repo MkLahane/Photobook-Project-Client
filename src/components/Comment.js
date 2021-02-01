@@ -8,7 +8,7 @@ import './comment.css';
 
 const Comment = ({ comment, photobookId }) => {
     const { user } = useContext(AuthContext);
-    console.log(comment);
+    //console.log(comment);
     const checkIfLiked = (likes) => {
         return likes.filter(like => like.user.username === user.username).length === 1;
     }
